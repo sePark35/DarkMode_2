@@ -25,7 +25,7 @@ export default function AddTodo({ onAdd }) {
     //버튼에 따로 이벤트를 주지 않아도 된다!
     <form onSubmit={handleSubmit}>
       <input
-        type="checkbox"
+        type="text"
         placeholder="Add Todo"
         value={text}
         onChange={handleChange}
