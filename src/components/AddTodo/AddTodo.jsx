@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 export default function AddTodo({ onAdd }) {
   const [text, setText] = useState("");
@@ -14,8 +15,8 @@ export default function AddTodo({ onAdd }) {
       return;
     }
     onAdd({
-      id: "몰라",
-      text: "text",
+      id: uuidv4(),
+      text: text,
       status: "active",
     });
     setText("");
@@ -24,7 +25,7 @@ export default function AddTodo({ onAdd }) {
     //버튼에 따로 이벤트를 주지 않아도 된다!
     <form onSubmit={handleSubmit}>
       <input
-        type="text"
+        type="checkbox"
         placeholder="Add Todo"
         value={text}
         onChange={handleChange}
