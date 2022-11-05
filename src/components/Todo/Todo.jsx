@@ -1,5 +1,6 @@
 import React from "react";
 import { BsTrash } from "react-icons/bs";
+import style from "./Todo.module.css";
 
 export default function ({ todo, onUpdate, onDelete }) {
   const { id, text, status } = todo;
@@ -14,17 +15,22 @@ export default function ({ todo, onUpdate, onDelete }) {
   const handleDelete = () => onDelete(todo);
 
   return (
-    <li>
+    <li className={style.todo}>
       <input
+        className={style.checkbox}
         id={id}
         type="checkbox"
         checked={status === "completed"}
         onChange={handleChange}
       />
-      <label htmlFor={id}>{text}</label>
-      <button onClick={handleDelete}>
-        <BsTrash />
-      </button>
+      <label className={style.text} htmlFor={id}>
+        {text}
+      </label>
+      <span className={style.icon}>
+        <button className={style.button} onClick={handleDelete}>
+          <BsTrash />
+        </button>
+      </span>
     </li>
   );
 }
