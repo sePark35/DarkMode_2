@@ -1,8 +1,21 @@
 .header {
   display: flex;
   justify-content: space-between;
+  padding: 0 0.5rem;
   align-items: center;
   background-color: var(--color-bg-dark);
+}
+
+.toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--color-text);
+  transition: all 150mm ease-out;
+}
+
+.toggle:hover {
+  transform: scale(1.1);
 }
 
 .filters {

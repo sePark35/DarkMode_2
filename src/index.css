@@ -1,4 +1,11 @@
 :root {
+  --color-bg-dark: #f5f5f5;
+  --color-bg: #fdfffd;
+  --color-text: #22243b;
+  --color-white: #fff;
+}
+
+html.dark {
   --color-bg-dark: #3f3b6c;
   --color-bg: #624f82;
   --color-text: #9f73ab;
